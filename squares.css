@@ -1,0 +1,59 @@
+/* Reset some default styles */
+body, html {
+    margin: 0;
+    padding: 0;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    background-color: black;
+}
+
+/* Center the container */
+.container {
+    display: flex;
+    flex-wrap: wrap;
+    width: 200px; /* Adjust size as needed */
+    height: 200px; /* Adjust size as needed */
+    position: relative;
+    animation: rotate 1s linear infinite;
+}
+
+/* The square */
+.square {
+    width: 100px;
+    height: 100px;
+    position: absolute;
+}
+
+/* Square colors */
+.blue {
+    background-color: #3b07f7;
+    top: 0;
+    left: 0;
+}
+.green {
+    background-color: #03f166;
+    top: 0;
+    right: 0;
+}
+.pink {
+    background-color: #9d0034;
+    bottom: 0;
+    left: 0;
+}
+.red {
+    background-color: #460802;
+    bottom: 0;
+    right: 0;
+}
+
+/* Animation keyframes */
+@keyframes rotate {
+    from {
+        transform: rotate(0deg);
+    }
+    to {
+        transform: rotate(360deg);
+    }
+}

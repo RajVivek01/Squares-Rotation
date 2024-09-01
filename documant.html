@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <style>
+    body {
+        margin: 0;
+        height: 100vh;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        background-color: black;
+        overflow: hidden;
+    }
+    .loader, .loader span {
+        width: 10em;
+        height: 10em;
+        border: 0.25em solid blue;
+        font-size: 10px;
+        border-radius: 1em;
+        position: absolute;
+        mix-blend-mode: screen;
+    }
+    .loader{
+        background-color: red;
+        animation: rotating 2s linear infinite;
+    }
+    @keyframes rotating {
+        to {
+            transform: rotating(1turn);
+        }
+     }
+     .loader span {
+        animation: de-rotating 4s linaer infinite;
+     }
+     @keyframes de-rotating {
+        from {
+            transform: rotate(0deg) scale(0.5);
+        }
+        to{
+            transform: rotate(360deg) scale(1.2);
+        }
+     }
+     .loader span:nth-child(1) {
+        top: 5em;
+        left: 5em;
+        background-color: green 
+    }
+.loader span:nth-child(2) {
+    top: -5em;
+    left: 5em;
+    background-color: brown;
+}
+.loader span:nth-child(3) {
+top: 5em;
+left: -5em;
+background-color: pink;
+}
+.loader span:nth-child(4) {
+top: -5em;
+left: -5em;
+background-color: limegreen;
+}
+    </style>
+</head>
+<body>
+    <div class="loader">
+        <span></span>
+        <span></span>
+        <span></span>
+        <span></span>
+    </div>
+</body>
+</html>
